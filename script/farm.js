@@ -15,6 +15,7 @@ contador = 0;
 var qntTropaTotal = ($("#light").html())
 
 function atacar(){
+    tempoAtaque = Math.trunc(Math.random() * (5000 - 2000 + 1) + 2000)
     console.log("Ataque : ", contador+1)
     local = "#" + ids[contador] +" > td:nth-child(3) > img"
     titulo = $(local).data('title')
@@ -37,7 +38,7 @@ function atacar(){
         console.log("Esse ataque não foi feito por falta de tropa suficiente ")
     }
     if(qntTropaTotal > 1){
-        if(contador < arrayIndexAtaque.length) setTimeout(() => { atacar()}, 5000)
+        if(contador < arrayIndexAtaque.length) setTimeout(() => { atacar()}, tempoAtaque)
     }
     console.log("Aldeia : ", arrayIndexAtaque[contador])
     console.log("Tropa Disponivel: " , qntTropaTotal)
