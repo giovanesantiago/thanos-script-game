@@ -1,4 +1,3 @@
-
 index = 2
 arrayIndexAtaque = []
 ids = []
@@ -47,5 +46,3 @@ function atacar(){
 
 }
 atacar()
-
-
